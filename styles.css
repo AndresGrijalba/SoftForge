@@ -1,138 +1,29 @@
-body {
+body{
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    text-align: center;
 }
-
-header {
-    background-color: #28a745;
-    color: white;
-    padding: 1em;
-}
-
-main {
-    padding: 2em;
-}
-
-section {
-    margin: 1em 0;
-}
-
-button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 0.5em 1em;
-    cursor: pointer;
-    margin-top: 1em;
-    border-radius: 5px;
-}
-
-button:hover {
-    background-color: #45a049;
-}
-
-.formulario {
-    margin-top: 1em;
-}
-
-.oculto {
-    opacity: 0;
-    pointer-events: none;
-    position: absolute;
-}
-
-.panel {
-    padding: 1em;
-    border: 1px solid #ccc;
-    margin-top: 1em;
-}
-
-.panel h2 {
-    color: #333;
-}
-
-.panel section {
-    margin-top: 1em;
-}
-
-.panel ul {
-    list-style-type: disc;
-    padding-left: 20px;
-}
-
-#panel {
-    display: none;
-    background-color: #f1f1f1;
-    padding: 15px;
-    border: 1px solid #ccc;
-    margin-top: 10px;
-    border-radius: 5px;
-  }
-  
-  .btn {
-    background-color: #28a745;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .btn:hover {
-    background-color: #218838;
-  }
-  
-  .panel-btn {
-    display: block;
-    margin: 10px 0;
-  }
-  
-  #menu-superpuesto {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+header{
+    background-color: rgb(61, 224, 143);
+    margin: 0px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    z-index: 1000;
-  }
-  
-  .menu-content {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    width: 300px;
-    text-align: center;
-  }
-  
-  .menu-content h2 {
-    margin-bottom: 20px;
-  }
-  
-  .menu-content label {
-    display: block;
-    text-align: left;
-    margin: 10px 0 5px;
-  }
-  
-  .menu-content input {
-    width: 100%;
+    justify-content: center;
     padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
+}
+.panel {
+    display: none;
+    /* Otros estilos para personalizar el panel */
+}
+.show {
+    display: block;
+}
+h1{
+    color: white;
+    font-weight: bolder;
+}
+button{
+    background-color: white;
+    height: 20px;
+    border-color: transparent;
     border-radius: 5px;
-  }
-  
-  .cerrar-btn {
-    background-color: #dc3545;
-  }
-  
-  .cerrar-btn:hover {
-    background-color: #c82333;
-  }
+}
