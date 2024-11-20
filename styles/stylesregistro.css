@@ -3,7 +3,11 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+<<<<<<< HEAD:stylesregistro.css
     background-image: url(./fondo.webp);
+=======
+    background-image: url(assets/fondo.webp);
+>>>>>>> 8be1820d16977c04ff84a32924eb361bc52963fa:styles/stylesregistro.css
     background-size: cover;
 }
 
