@@ -52,7 +52,7 @@ header {
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn{
-    background-color: red;
+    background-color: #28a745;
 }
 
 .dropdown-content{
@@ -136,7 +136,7 @@ form button {
 }
 
 form button:hover {
-    background-color: red;
+    background-color: #28a745;
 }
 
 button {
@@ -151,7 +151,7 @@ button {
 }
 
 button:hover {
-    background-color: red;
+    background-color: #28a745;
 }
 
 .buttons-container {
