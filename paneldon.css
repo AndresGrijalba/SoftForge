@@ -1,0 +1,191 @@
+/* Estilos Generales */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    background: linear-gradient(to bottom, #4CAF50, #d2d8c7);
+    height: 100%;  
+    margin: 0;     
+    padding: 0; 
+    min-height: 100vh;
+    
+}
+
+p{
+    font-family: 'Arial', sans-serif;
+}
+
+header {
+    background: linear-gradient(to bottom, #4CAF50, #d2d8c7);
+    color: white;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 200;
+    font-size: 2rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 15px;
+    position: relative; /* Necesario para colocar los párrafos debajo */
+}
+
+.info-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 20px; /* Bordes redondeados */
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+    margin-left: 0px; /* Ajusta este valor para mover los botones a la derecha */
+    margin-right: 20px; 
+    display: flex; /* Para alinear el ícono y el texto horizontalmente */
+    align-items: center;
+    gap: 10px; /* Espaciado entre el ícono y el texto */
+    
+}
+
+img{
+    width: 20px;
+    height: 20px;
+    filter: invert(1);
+}
+
+
+.info-btn:hover {
+    background-color: #283824;
+}
+
+.info {
+    display: none; /* Están ocultos por defecto */
+    margin-top: 10px;
+    font-size: 0.9rem;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    position: absolute;
+    top: 40px; /* Ajusta la distancia entre el botón y el párrafo */
+    left: 0;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    color:rgb(39, 36, 36);
+    padding: 15px;
+    width: 150px; /* Ajusta el ancho del contenedor */
+    min-height: 100px;
+}
+
+/* Mostrar la sección activa */
+li:hover .info {
+    display: block;
+}
+
+/* Sección de Búsqueda */
+.search {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#searchBox {
+    padding: 10px;
+    width: 50%;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+
+.organizations {
+    justify-content: space-around;
+    flex-direction: column; /* Coloca los divs uno debajo del otro */
+    display: grid; /* Activa el diseño de grid */
+    grid-template-columns: repeat(2, 1fr); /* Define dos columnas del mismo tamaño */
+    gap: 1rem; /* Espaciado entre las tarjetas */
+    margin: 20px auto; /* Centra el contenedor horizontalmente */
+    padding: 1rem; /* Espaciado interno del contenedor */
+    max-width: 1200px; /* Ancho máximo del contenedor */
+}
+
+.organization {
+    border: 2px solid #ddd; /* Borde alrededor de cada tarjeta */
+    border-radius: 40px; /* Bordes redondeados */
+    padding: 1rem; /* Espaciado interno */
+    background-color: #f9f9f9; /* Fondo ligero */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
+    text-align: center; /* Centra el texto dentro de cada tarjeta */
+}
+
+.organization h2 {
+    margin-top: 0;
+}
+
+#panel-organizaciones{
+   
+    margin-bottom: 1rem;  
+    width: 100%; 
+    border: 1px solid #ddd; 
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column; /* Coloca los elementos en una columna */
+    align-items: center;    /* Centra horizontalmente */
+    justify-content: center; /* Centra verticalmente */
+    text-align: center;     /* Alinea texto al centro */
+    margin: 0 auto;         /* Centra la sección en la página */
+    padding: 2rem;
+    background-image: url('.png'); /* Ruta de la imagen */
+    background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    color: white; /* Cambia el texto a blanco para mejor contraste */  
+}
+    
+
+
+#buscador {
+    width: 80%;             /* Ajusta el ancho del buscador */
+    max-width: 600px;       /* Limita el ancho máximo */
+    padding: 0.5rem;        /* Espaciado interno */
+    margin: 1rem 0;         /* Espaciado entre elementos */
+    border: 1px solid #ddd; /* Estilo del borde */
+    border-radius: 30px;     /* Borde redondeado */
+}
+  
+  #organizaciones {
+    width: 100%;            /* Ajusta el ancho al 100% del contenedor */
+    max-width: 800px;       /* Limita el ancho máximo */
+    margin-top: 1rem;
+}
+
+.amount {
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+#map-section {
+    margin: 20px auto;
+    padding: 1rem;
+    text-align: center;
+}
+
+#map {
+    height: 400px;
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}

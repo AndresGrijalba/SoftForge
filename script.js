@@ -1,14 +1,15 @@
-const btnOrganizacion = document.getElementById('btn-organizacion');
-const btnDonante = document.getElementById('btn-donante');
-const panelOrganizacion = document.getElementById('panel-organizacion');
-const panelDonante = document.getElementById('panel-donante');
 
-btnOrganizacion.addEventListener('click', () => {
-    panelOrganizacion.classList.toggle('show');
-    panelDonante.classList.remove('show');
-});
-
-btnDonante.addEventListener('click', () => {
-    panelDonante.classList.toggle('show');
-    panelOrganizacion.classList.remove('show');
-});
+function registrarDonante(event) {
+    event.preventDefault(); 
+    const nombre = document.getElementById("nombreDonante").value;
+    const email = document.getElementById("emailDonante").value;
+    const intereses = document.getElementById("interesesDonante").value;
+    
+    console.log("Datos del Donante:");
+    console.log("Nombre:", nombre);
+    console.log("Correo Electrónico:", email);
+    console.log("Intereses:", intereses);
+    
+    alert("¡Donante registrado con éxito!");
+}
+document.getElementById("formDonante").addEventListener("submit", registrarDonante);
