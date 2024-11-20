@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HelpBridge</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet"> <!-- Fuente Profesional -->
+    <link rel="stylesheet" href="paneldon.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha384-sHjUeJ9Q/jKtjQaEt/xkK6FyEvynLzFb4BjD2iF7F5CNIBtp/urIRN/RaP5N40mO" crossorigin=""/>
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <header>
+        <div class="logo">
+            <h1>HelpBridge</h1>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <button class="info-btn" id="infoBtn">
+                        <img src="icons/info.svg" alt="Información"> Información
+                    </button>
+                    <p id="info" class="info">HelpBridge es una plataforma que conecta personas como tú con organizaciones benéficas en todo el mundo.
+                        Es una excelente opción para ayudar a quienes más lo necesitan, incluso en la distancia .</p>
+                </li>
+                <li>
+                    <button class="info-btn" id="howBtn">
+                        <img src="icons/funcion.svg" alt="Cómo funciona">Cómo funciona</button>
+                    <p id="how" class="info">Los donantes pueden buscar organizaciones por tipo de ayuda, país,
+                        saber información acerca del monto recaudado y contactarse directamente con dichas entidades para hacer su aporte.</p>
+                </li>
+                <li>
+                    <button class="info-btn" id="contactBtn">
+                    <img src="icons/contacto.svg" alt="Contacto">Contacto</button>
+                    <p id="contact" class="info">Si deseas más información, puedes contactarnos a través de nuestras redes sociales</p>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="panel-organizaciones">
+        <h1>Sitios en los que puedes hacer tu aporte</h1>
+        <input 
+          type="text" 
+          id="buscador" 
+          placeholder="Buscar por palabra clave...">
+        <div id="organizaciones"></div>
+      </section>
+      
+
+    <!-- Panel Principal de Organizaciones -->
+    <section class="organizations">
+        <div class="organization">
+            <h2>Organización 1</h2>
+            <p>Recaudado: <span class="amount">$5000</span></p>
+            <p>Tipo de ayuda: Alimentos</p>
+            <p>País: México</p>
+        </div>
+        <div class="organization">
+            <h2>Organización 2</h2>
+            <p>Recaudado: <span class="amount">$3000</span></p>
+            <p>Tipo de ayuda: Ropa</p>
+            <p>País: Colombia</p>
+        </div>
+        <div class="organization">
+            <h2>Organización 2</h2>
+            <p>Recaudado: <span class="amount">$3000</span></p>
+            <p>Tipo de ayuda: Ropa</p>
+            <p>País: Colombia</p>
+        </div>
+        <div class="organization">
+            <h2>Organización 2</h2>
+            <p>Recaudado: <span class="amount">$3000</span></p>
+            <p>Tipo de ayuda: Ropa</p>
+            <p>País: Colombia</p>
+        </div>
+        <div class="organization">
+            <h2>Organización 2</h2>
+            <p>Recaudado: <span class="amount">$3000</span></p>
+            <p>Tipo de ayuda: Ropa</p>
+            <p>País: Colombia</p>
+        </div>
+        <div class="organization">
+            <h2>Organización 2</h2>
+            <p>Recaudado: <span class="amount">$3000</span></p>
+            <p>Tipo de ayuda: Ropa</p>
+            <p>País: Colombia</p>
+        </div>
+        <div class="organization">
+            <h2>Valen </h2>
+            <p>Recaudado: <span class="amount">$3000</span></p>
+            <p>Tipo de ayuda: Ropa</p>
+            <p>País: Colombia</p>
+        </div>
+    </section>
+    <section id="map-section">
+        <h2>Mapa de Organizaciones</h2>
+        <div id="map"></div>
+    </section>
+
+    <script src="paneldon.js"></script>
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha384-wPZ4IXZTQsBSQlTpt67RtRXh6oVIvZXixAEupihQuHH6X1L6a9Zj9HPIJSKABbYe" crossorigin=""></script>
+   
+    <marquee behavior="scroll" direction="rigth">
+        ¡No te pierdas esta gran oportunidad!                            Aqui puedes ver todas las organizaciones activas
+    </marquee>
+
+    <script src="paneldon.js"></script>
+</body>
+</html>
