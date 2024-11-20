@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informacion General</title>
+    <link rel="stylesheet" href="infoGeneral.css">
+</head>
+<body>
+    <header>
+        <h1 id="title">Informacion General</h1>
+    </header>
+    <nav class="navbar">
+        <a href="panelorg.htm">Inicio</a>
+        <div class="dropdown">
+            <button class="dropbtn">Servicios</button>
+            <div class="dropdown-content">
+                <a href="">Historial de Donaciones</a>
+                <a href="">Proyectos Activos</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Perfil</button>
+            <div class="dropdown-content">
+                <a href="infoGeneral.html">Informacion General</a>
+                <a href="">Informacion Bancaria</a>
+                <a href="">Cerrar Sesion</a>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="form-container active" id="organizacion">
+            <form>
+                <input type="text" id="org-name" placeholder="Nombre Organizacion">
+                <input type="email" id="rep-email" placeholder="Correo Electrónico">
+                <input type="text" id="categoria" placeholder="Categoria">
+            </form>
+        </div>
+        <div class="form-container2 active" id="organizacionD2"> 
+            <form>
+                <input type="text" id="location" placeholder="Ubicacion">
+                <input type="tel" id="phone" placeholder="Número de Teléfono">
+                <textarea id="description" placeholder="Descripción de la Organización"></textarea>
+            </form>
+        </div>
+        <div class="buttons-container">
+            <button type="button">Editar</button>
+            <button type="button">Eliminar</button>
+        </div>
+    </main>
+    
+    <footer>
+        <hr>
+        <p>&copy; 2024 Plataforma de Conexión. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
