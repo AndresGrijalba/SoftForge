@@ -10,10 +10,29 @@
     <header>
         <h1>Conexión de Donantes y Organizaciones Benéficas</h1>
         <p>Una plataforma para unir donantes con organizaciones que necesitan ayuda.</p>
-        <button>Ingresar</button>
+        <div id="panel">
+            <button class="btn panel-btn" id="organizacion-btn">Ingresar como organización</button>
+            <button class="btn panel-btn">Ingresar como donante</button>
+          </div>
     </header>
 
     <main>
+        <div id="menu-superpuesto">
+            <div class="menu-content">
+              <h2>Ingresar como organización</h2>
+              <form id="form-organizacion">
+                <label for="correo">Correo:</label>
+                <input type="email" id="correo" name="correo" placeholder="Ingrese su correo" required>
+                
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" id="contrasena" name="contrasena" placeholder="Ingrese su contraseña" required>
+                
+                <button type="submit" class="btn">Ingresar</button>
+              </form>
+              <button class="btn cerrar-btn" id="cerrar-menu">Cerrar</button>
+            </div>
+          </div>
+
         <section id="donantes">
             <h2>¿Eres Donante?</h2>
             <p>Descubre organizaciones que necesitan tu ayuda y haz una diferencia.</p>
