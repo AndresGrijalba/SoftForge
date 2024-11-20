@@ -3,46 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HelpBridge SoftForge</title>
+    <title>Login</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>HelpBridge SoftForge</h1>
-        <p>Una plataforma para unir donantes con organizaciones que necesitan ayuda.</p>
-        <div id="panel">
-            <button id="btn-organizacion">Ingresar como Organización</button>
-            <button id="btn-donante">Ingresar como Donante</button>
-          </div>
-    </header>
-
-    <main>
-        <div id="panel-organizacion" class="panel hidden">
-            <input type="email" placeholder="Correo electrónico">
-            <input type="password" placeholder="Contraseña">
-        </div>
-        <div id="panel-donante" class="panel hidden">
-            <input type="email" placeholder="Correo electrónico">
-            <input type="password" placeholder="Contraseña">
-        </div>
-
-        <section id="donantes">
-            <h2>¿Eres Donante?</h2>
-            <p>Descubre organizaciones que necesitan tu ayuda y haz una diferencia.</p>
-            <button onclick="mostrarFormularioDonante()">Conectar con una Organización</button>
-        </section>
-
-        <section id="organizaciones">
-            <h2>¿Eres una Organización Benéfica?</h2>
-            <p>Únete a nuestra plataforma para recibir donaciones y apoyo.</p>
-            <button onclick="mostrarFormularioOrganizacion()">Regístrate para recibir donaciones</button>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Plataforma de Conexión. Todos los derechos reservados.</p>
-    </footer>
-
-    <script src="script.js"></script>
+    <div class="login-container">
+        <h2>Iniciar Sesión</h2>
+        <form action="/tu_proceso_de_login" method="post">
+            <input type="email" name="email" placeholder="Correo electrónico" required>
+            <input type="password" name="password" placeholder="Contraseña" required>
+            <button type="submit">Entrar</button>
+        </form>
+        <p>Aún no te encuentras registrado?</p>
+        <a href="/registrarse">Regístrate aquí</a>
+    </div>
 </body>
 </html>
