@@ -61,6 +61,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const orgId = event.target.dataset.id;
             const orgName = event.target.dataset.nombre;
 
+            console.log(event.target.dataset.id)
+
             // Mostrar modal y setear datos
             modal.style.display = 'block';
             donationForm.dataset.orgId = orgId;
@@ -110,4 +112,40 @@ document.addEventListener('DOMContentLoaded', () => {
             alert('Error al procesar la donación. Intente nuevamente más tarde.');
         }
     });
+
+    document.getElementById('donationForm').addEventListener('submit', async (event) => {
+        event.preventDefault();
+    
+        const recaudacionId = event.target.getAttribute('data-id'); // ID de la recaudación asociada
+        const monto = document.getElementById('monto').value; // Monto ingresado
+        const medioPago = document.getElementById('medio').value; // Medio de pago seleccionado
+    
+        try {
+            const response = await fetch('http://127.0.0.1:5000/guardar_donacion', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    recaudacion_id: recaudacionId,
+                    monto: monto,
+                    medio_pago: medioPago,
+                }),
+            });
+    
+            const data = await response.json();
+    
+            if (response.ok) {
+                alert('Donación guardada exitosamente.');
+                // Recargar la página o realizar otra acción después de la donación
+                window.location.reload();
+            } else {
+                alert(`Error: ${data.error}`);
+            }
+        } catch (error) {
+            console.error('Error al guardar la donación:', error);
+            alert('Error al procesar la donación. Intenta nuevamente.');
+        }
+    });
+    
 });

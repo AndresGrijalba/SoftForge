@@ -93,27 +93,34 @@ def obtener_organizaciones():
         cursor.close()
 
 @app.route('/donar', methods=['POST'])
-def realizar_donacion():
+def guardar_donacion():
     datos = request.json
-    organizacion_id = datos.get('organizacion_id')
+    recaudacion_id = datos.get('recaudacion_id')
     monto = datos.get('monto')
-    medio = datos.get('medio')
+    medio_pago = datos.get('medio_pago')
 
-    if not all([organizacion_id, monto, medio]):
+    if not all([recaudacion_id, monto, medio_pago]):
         return jsonify({"error": "Todos los campos son obligatorios"}), 400
 
     cursor = db.cursor()
     try:
-        # Actualizar el monto recaudado de la organización
+        # Insertar la donación en la tabla `donaciones`
         cursor.execute(
-            "UPDATE recaudaciones SET monto = monto - %s WHERE id = %s",
-            (monto, organizacion_id)
+            "INSERT INTO donaciones (recaudacion_id, monto, medio_pago) VALUES (%s, %s, %s)",
+            (recaudacion_id, monto, medio_pago)
         )
+
+        # Actualizar el monto recaudado en la tabla `recaudaciones`
+        cursor.execute(
+            "UPDATE recaudaciones SET monto = monto + %s WHERE id = %s",
+            (monto, recaudacion_id)
+        )
+
         db.commit()
-        return jsonify({"mensaje": "Donación realizada exitosamente"}), 200
+        return jsonify({"mensaje": "Donación guardada exitosamente"}), 200
     except mysql.connector.Error as err:
         print(f"Error: {err}")
-        return jsonify({"error": "Error al realizar la donación"}), 500
+        return jsonify({"error": "Error al guardar la donación"}), 500
     finally:
         cursor.close()
 
