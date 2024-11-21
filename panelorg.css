@@ -25,20 +25,37 @@ header h1 {
     text-transform: uppercase;
 }
 
-.navbar{
-    overflow: hidden;
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #333;
-
+    padding: 0 10px;
 }
 
-.navbar a{
-    float: left; 
+
+.navbar a, .dropdown .dropbtn {
+    color: white;
     text-decoration: none;
     padding: 14px 16px;
-    text-align: center;
-    color: white;
     font-size: 16px;
+    display: inline-block;
+}
 
+.navbar-svg {
+    margin-left: auto;
+    padding: 10px;
+}
+
+.navbar-svg img {
+    height: 30px; 
+    width: auto;
+    cursor: pointer;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn, .navbar-svg:hover img {
+    background-color: #28a745; 
+    border-radius: 5px;
 }
 
 .dropdown{
