@@ -3,6 +3,7 @@ const API_URL = 'http://127.0.0.1:5000/organizaciones';
 
 document.querySelector('form').addEventListener('submit', async (e) => {
     e.preventDefault(); 
+    let selectedRole = 'organizacion';
     const nombre = document.getElementById('org-name').value.trim();
     const correo = document.getElementById('rep-email').value.trim();
     const contraseña = document.getElementById('password').value.trim();
