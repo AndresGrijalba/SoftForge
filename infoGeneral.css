@@ -164,3 +164,12 @@ button:hover {
     left: 0;
     right: 0;
 }
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f4f4f4;
+    font-size: 14px;
+    color: #555;
+    margin-top: 20px;
+}
