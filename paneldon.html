@@ -51,11 +51,11 @@
 
     <!-- Panel Principal de Organizaciones -->
     <section class="organizations">
-        <div class="organization">
-            <h2>Organización 1</h2>
+        <div class="card">
+            <h2>Alimentos para los niños de Ucrania</h2>
             <p>Recaudado: <span class="amount">$5000</span></p>
-            <p>Tipo de ayuda: Alimentos</p>
-            <p>País: México</p>
+            <p>País: Ucrania</p>
+            <button class="btn-donar" id="donarBtn">Donar</button>
         </div>
         <div class="organization">
             <h2>Organización 2</h2>
@@ -98,15 +98,32 @@
         <h2>Mapa de Organizaciones</h2>
         <div id="map"></div>
     </section>
-
-    <script src="paneldon.js"></script>
-    <!-- Leaflet JS -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha384-wPZ4IXZTQsBSQlTpt67RtRXh6oVIvZXixAEupihQuHH6X1L6a9Zj9HPIJSKABbYe" crossorigin=""></script>
-   
     <marquee behavior="scroll" direction="rigth">
         ¡No te pierdas esta gran oportunidad!                            Aqui puedes ver todas las organizaciones activas
     </marquee>
-
+    <div id="donarModal" class="modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2>Realizar Donación</h2>
+            <span class="close" id="closeModal">&times;</span>
+          </div>
+          <form id="donationForm">
+            <div class="form-group">
+              <label for="monto">Monto:</label>
+              <input type="number" id="monto" name="monto" required>
+            </div>
+            <div class="form-group">
+              <label for="medio">Medio de Pago:</label>
+              <select id="medio" name="medio" required>
+                <option value="tarjeta">Tarjeta de Crédito</option>
+                <option value="paypal">PayPal</option>
+                <option value="transferencia">Transferencia Bancaria</option>
+              </select>
+            </div>
+            <button type="submit" class="btn-donar">Confirmar Donación</button>
+          </form>
+        </div>
+      </div>
     <script src="paneldon.js"></script>
 </body>
 </html>
