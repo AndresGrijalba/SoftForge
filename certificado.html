@@ -3,63 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Generar Certificado</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            flex-direction: column;
-        }
-        .form-container {
-            margin-bottom: 20px;
-            text-align: center;
-        }
-        .form-group {
-            margin-bottom: 10px;
-        }
-        .certificate {
-            width: 800px;
-            border: 4px solid #0066cc;
-            border-radius: 10px;
-            background: #fff;
-            padding: 30px;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            position: relative;
-        }
-        .certificate h1 {
-            font-size: 42px;
-            color: #0066cc;
-            margin-bottom: 20px;
-        }
-        .certificate p {
-            font-size: 20px;
-            margin: 10px 0;
-            color: #333;
-        }
-        .certificate h2 {
-            font-size: 36px;
-            color: #000;
-        }
-        .certificate h3 {
-            font-size: 24px;
-            color: #555;
-        }
-        .icons img {
-            width: 60px;
-            margin: 0 15px;
-        }
-        #guardarPDF {
-            margin-top: 10px;
-        }
-    </style>
+    <title>Certificado de Donación</title>
+    <link rel="stylesheet" href="certificado.css">
 </head>
 <body>
     <div class="form-container">
@@ -68,72 +13,11 @@
             <input type="text" id="nombre" placeholder="Ingresa tu nombre">
         </div>
         <button id="generarCertificado">Generar Certificado</button>
-        <button id="guardarPDF" style="display: none;">Guardar como PDF</button>
+        <a id="descargarCertificado" download="Certificado_Donacion.png">Descargar Certificado</a>
     </div>
     <div id="certificadoContainer"></div>
 
-    <script>
-        // Captura el evento del botón para generar el certificado
-        document.getElementById('generarCertificado').addEventListener('click', () => {
-            const nombre = document.getElementById('nombre').value;
-
-            if (!nombre) {
-                alert('Por favor, ingresa tu nombre');
-                return;
-            }
-
-            // Obtiene la fecha actual del sistema
-            const fechaActual = new Date().toLocaleDateString('es-ES', {
-                day: 'numeric',
-                month: 'long',
-                year: 'numeric'
-            });
-
-            // Genera el certificado dinámicamente
-            const certificado = `
-                <div class="certificate" id="certificado">
-                    <h1>Certificado de Donación</h1>
-                    <p>Se otorga el presente certificado a</p>
-                    <h2>${nombre}</h2>
-                    <p>Por su valiosa contribución realizada el</p>
-                    <h3>${fechaActual}</h3>
-                    <div class="icons">
-                        <img src="https://via.placeholder.com/60?text=❤️" alt="Heart">
-                        <img src="https://via.placeholder.com/60?text=🤝" alt="Handshake">
-                        <img src="https://via.placeholder.com/60?text=🌍" alt="Globe">
-                    </div>
-                </div>
-            `;
-
-            // Inserta el certificado en el contenedor
-            document.getElementById('certificadoContainer').innerHTML = certificado;
-
-            // Muestra el botón para guardar como PDF
-            document.getElementById('guardarPDF').style.display = 'inline-block';
-        });
-
-        // Función para guardar el certificado como PDF
-        document.getElementById('guardarPDF').addEventListener('click', async () => {
-            const certificado = document.getElementById('certificado');
-
-            if (!certificado) {
-                alert('Primero genera un certificado.');
-                return;
-            }
-
-            const { jsPDF } = window.jspdf;
-            const pdf = new jsPDF('p', 'mm', 'a4');
-
-            await pdf.html(certificado, {
-                callback: function (pdf) {
-                    
-                    pdf.save('Certificado_Donacion.pdf');
-                },
-                x: 10,
-                y: 10,
-                width: 190 
-            });
-        });
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="certificado.js"></script>
 </body>
 </html>

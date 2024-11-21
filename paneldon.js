@@ -102,6 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 alert(`Donación realizada exitosamente:\nMonto: $${monto}\nMedio de Pago: ${medio}`);
                 modal.style.display = 'none';
                 cargarOrganizaciones(); // Actualizar recaudado
+                window.location.href = 'certificado.html';
             } else {
                 const error = await response.json();
                 alert(`Error al realizar la donación: ${error.message}`);

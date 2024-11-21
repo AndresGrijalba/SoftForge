@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+.form-container {
+    margin-bottom: 20px;
+    text-align: center;
+    padding-top: 200px;
+}
+.form-group {
+    margin-bottom: 10px;
+}
+.certificate {
+    width: 800px;
+    height: 600px;
+    border: 4px solid #0066cc;
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    background-image: url('./fondopdf.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+}
+.certificate h1 {
+    font-size: 42px;
+    color: #0066cc;
+    padding-top: 155px;
+    margin-bottom: 20px;
+}
+.certificate p {
+    font-size: 20px;
+    margin: 10px 0;
+    color: #333;
+}
+.certificate h2 {
+    font-size: 36px;
+    color: #000;
+}
+.certificate h3 {
+    font-size: 24px;
+    color: #555;
+}
+#generarCertificado {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 16px;
+    text-align: center;
+}
+#generarCertificado:hover {
+    background-color: #28a745;
+}
+#descargarCertificado {
+    display: none;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+#descargarCertificado:hover {
+    background-color: #28a745;
+}
