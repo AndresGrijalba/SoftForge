@@ -3,53 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conexión de Donantes y Organizaciones Benéficas</title>
+    <title>Login</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Conexión de Donantes y Organizaciones Benéficas</h1>
-        <p>Una plataforma para unir donantes con organizaciones que necesitan ayuda.</p>
-        <button>Ingresar</button>
-    </header>
-
-    <main>
-        <section id="donantes">
-            <h2>¿Eres Donante?</h2>
-            <p>Descubre organizaciones que necesitan tu ayuda y haz una diferencia.</p>
-            <button onclick="mostrarFormularioDonante()">Conectar con una Organización</button>
-        </section>
-
-        <section id="organizaciones">
-            <h2>¿Eres una Organización Benéfica?</h2>
-            <p>Únete a nuestra plataforma para recibir donaciones y apoyo.</p>
-            <button onclick="mostrarFormularioOrganizacion()">Regístrate para recibir donaciones</button>
-        </section>
-
-        <div id="formularioDonante" class="formulario oculto">
-            <h3>Formulario para Donantes</h3>
-            <label for="nombreDonante">Nombre:</label>
-            <input type="text" id="nombreDonante" name="nombreDonante">
-            <label for="emailDonante">Correo Electrónico:</label>
-            <input type="email" id="emailDonante" name="emailDonante">
-            <button onclick="enviarFormulario('donante')">Enviar</button>
-        </div>
-
-        <div id="formularioOrganizacion" class="formulario oculto">
-            <h3>Formulario para Organizaciones</h3>
-            <label for="nombreOrganizacion">Nombre de la Organización:</label>
-            <input type="text" id="nombreOrganizacion" name="nombreOrganizacion">
-            <label for="emailOrganizacion">Correo Electrónico:</label>
-            <input type="email" id="emailOrganizacion" name="emailOrganizacion">
-            <button onclick="enviarFormulario('organizacion')">Enviar</button>
-        </div>
-        
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Plataforma de Conexión. Todos los derechos reservados.</p>
-    </footer>
-
-    <script src="script.js"></script>
+    <div class="login-container">
+        <h2>Iniciar Sesión</h2>
+        <form id="loginForm">
+            <input type="email" id="login-email" placeholder="Correo electrónico" required>
+            <input type="password" id="login-password" placeholder="Contraseña" required>
+            <button type="submit">Ingresar</button>
+        </form>
+        <p>Aún no te encuentras registrado?</p>
+        <a href="registro.html">Regístrate aquí</a>
+    </div>
+    <script src="appreg.js"></script>
 </body>
 </html>

@@ -1,64 +1,67 @@
 body {
     font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     margin: 0;
-    padding: 0;
+    background-image: url(assets/fondo.webp);
+    background-size: cover;
+}
+
+.login-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    height: 300px;
+}
+
+.login-container h2 {
     text-align: center;
+    margin-bottom: 20px;
 }
 
-header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 1em;
+.login-container p {
+    text-align: center;
+    font-size: 14px;
 }
 
-main {
-    padding: 2em;
+.login-container input {
+    width: 280px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+
 }
 
-section {
-    margin: 1em 0;
-}
-
-button {
-    background-color: #4CAF50;
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
     color: white;
     border: none;
-    padding: 0.5em 1em;
+    border-radius: 4px;
     cursor: pointer;
-    margin-top: 1em;
-    border-radius: 5px;
+    margin-top: 10px;
 }
 
-button:hover {
-    background-color: #45a049;
+.login-container button:hover {
+    background-color: #558457;
 }
 
-.formulario {
-    margin-top: 1em;
+.login-container a {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+    margin-bottom: 15px;
 }
 
-.oculto {
-    opacity: 0;
-    pointer-events: none;
-    position: absolute;
+.login-container a:hover {
+    text-decoration: underline;
 }
-
-.panel {
-    padding: 1em;
-    border: 1px solid #ccc;
-    margin-top: 1em;
-}
-
-.panel h2 {
-    color: #333;
-}
-
-.panel section {
-    margin-top: 1em;
-}
-
-.panel ul {
-    list-style-type: disc;
-    padding-left: 20px;
-}
-

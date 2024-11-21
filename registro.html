@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Organización y Donante</title>
+    <link rel="stylesheet" href="stylesregistro.css">
+</head>
+<body>
+    <!-- Opcion Organicacion o Donante -->
+    <!-- Opcion Organizacion = Rol Org  -->
+    <!-- Opcion Donante = Rol Don  -->
+    <!-- Tabla User = name, email, pass, rol  -->
+    <!-- user.rol === org ? panelOrg.html : panelDon.html-->
+    <!-- Alter table User column affect rol -->
+
+
+    <!-- Tabla User = name, email, pass, rol  -->
+    <!-- bryan, bryanpercy77@gmail.com, 1234, donante -->
+    <!-- Fundacion pies descalzos, fpdz77@gmail.com, 1234, organizacion -->
+
+    <!-- Insert Table User -->
+     
+
+    <div class="container">
+        <div class="tabs">
+            <div class="tab active" onclick="showTab('organizacion')">Organización</div>
+            <div class="tab" onclick="showTab('donante')">Donante</div>
+        </div>
+        <div class="form-container active" id="organizacion">
+            <form>
+                <label for="org-name">Nombre de la Organización*</label>
+                <input type="text" id="org-name" placeholder="Ingrese el nombre">
+
+                <label for="rep-email">Correo Electronico*</label>
+                <input type="email" id="rep-email" placeholder="Ingrese el correo electrónico">
+
+                <label for="password">Contraseña*</label>
+                <input type="password" id="password" placeholder="Ingrese la contraseña">
+
+                <label for="confirm-password">Confirmar Contraseña*</label>
+                <input type="password" id="confirm-password" placeholder="Confirme la contraseña">
+
+                <button type="submit">Registrarse</button>
+            </form>
+        </div>
+        <div class="form-container" id="donante">
+            <form>
+                <label for="don-name">Nombre:</label>
+                <input type="text" id="don-name" placeholder="Ingrese el nombre*">
+
+                <label for="rep-email">Correo Electronico:</label>
+                <input type="email" id="rep-email" placeholder="Ingrese su correo electrónico*">
+
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" placeholder="Ingrese una contraseña*">
+
+                <label for="confirm-password">Confirmar Contraseña:</label>
+                <input type="password" id="confirm-password" placeholder="Confirmar contraseña*">
+
+                <button type="submit">Registrarse</button>
+            </form>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
