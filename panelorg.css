@@ -51,6 +51,8 @@ header h1 {
     height: 30px; 
     width: auto;
     cursor: pointer;
+    filter: invert(1);
+
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn, .navbar-svg:hover img {
@@ -140,5 +142,6 @@ header h1 {
     line-height: 1.6;
     text-align: justify;
     margin: 10px 0;
+    
 }
 

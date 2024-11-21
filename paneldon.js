@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     card.innerHTML = `
                         <h2>${org.nombre}</h2>
                         <p>Descripción: ${org.descripcion}</p>
-                        <p>Recaudado: <span class="amount">$${org.recaudado}</span></p>
+                        <p>Por recaudar: <span class="amount">$${org.recaudado}</span></p>
                         <p>País: ${org.pais}</p>
                         <button class="btn-donar" data-id="${org.id}" data-nombre="${org.nombre}">Donar</button>
                     `;

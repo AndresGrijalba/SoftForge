@@ -106,7 +106,7 @@ def realizar_donacion():
     try:
         # Actualizar el monto recaudado de la organización
         cursor.execute(
-            "UPDATE recaudaciones SET monto = monto + %s WHERE id = %s",
+            "UPDATE recaudaciones SET monto = monto - %s WHERE id = %s",
             (monto, organizacion_id)
         )
         db.commit()
