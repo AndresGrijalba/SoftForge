@@ -105,7 +105,7 @@ nav ul {
 
 nav ul li {
     margin-right: 15px;
-    position: relative; /* Necesario para colocar los párrafos debajo */
+    position: relative;
 }
 
 .info-btn {
@@ -114,14 +114,14 @@ nav ul li {
     border: none;
     padding: 10px 20px;
     cursor: pointer;
-    border-radius: 10px; /* Bordes redondeados */
+    border-radius: 10px; 
     transition: background-color 0.3s ease;
     font-size: 1rem;
-    margin-left: 0px; /* Ajusta este valor para mover los botones a la derecha */
+    margin-left: 0px; 
     margin-right: 20px; 
-    display: flex; /* Para alinear el ícono y el texto horizontalmente */
+    display: flex; 
     align-items: center;
-    gap: 10px; /* Espaciado entre el ícono y el texto */
+    gap: 10px; 
     
 }
 
@@ -137,7 +137,7 @@ img{
 }
 
 .info {
-    display: none; /* Están ocultos por defecto */
+    display: none; 
     margin-top: 10px;
     font-size: 0.9rem;
     background-color: white;
@@ -145,18 +145,17 @@ img{
     border: 1px solid #ddd;
     border-radius: 5px;
     position: absolute;
-    top: 40px; /* Ajusta la distancia entre el botón y el párrafo */
+    top: 40px; 
     left: 0;
     width: 100%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 10;
     color:rgb(39, 36, 36);
     padding: 15px;
-    width: 150px; /* Ajusta el ancho del contenedor */
+    width: 150px; 
     min-height: 100px;
 }
 
-/* Mostrar la sección activa */
 li:hover .info {
     display: block;
 }
@@ -178,22 +177,22 @@ li:hover .info {
 
 .organizations {
     justify-content: space-around;
-    flex-direction: column; /* Coloca los divs uno debajo del otro */
-    display: grid; /* Activa el diseño de grid */
-    grid-template-columns: repeat(2, 1fr); /* Define dos columnas del mismo tamaño */
-    gap: 1rem; /* Espaciado entre las tarjetas */
-    margin: 20px auto; /* Centra el contenedor horizontalmente */
-    padding: 1rem; /* Espaciado interno del contenedor */
-    max-width: 1200px; /* Ancho máximo del contenedor */
+    flex-direction: column;
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 1rem; 
+    margin: 20px auto; 
+    padding: 1rem; 
+    max-width: 1200px; 
 }
 
 .organization {
-    border: 2px solid #ddd; /* Borde alrededor de cada tarjeta */
-    border-radius: 15px; /* Bordes redondeados */
-    padding: 1rem; /* Espaciado interno */
-    background-color: #f9f9f9; /* Fondo ligero */
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
-    text-align: center; /* Centra el texto dentro de cada tarjeta */
+    border: 2px solid #ddd; 
+    border-radius: 15px; 
+    padding: 1rem; 
+    background-color: #f9f9f9; 
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); 
+    text-align: center; 
 }
 
 .organization h2 {
@@ -206,32 +205,30 @@ li:hover .info {
     width: 100%; 
     border-radius: 4px;
     display: flex;
-    flex-direction: column; /* Coloca los elementos en una columna */
-    align-items: center;    /* Centra horizontalmente */
-    justify-content: center; /* Centra verticalmente */
-    text-align: center;     /* Alinea texto al centro */
-    margin: 0 auto;         /* Centra la sección en la página */
-    background-image: url('.png'); /* Ruta de la imagen */
-    background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
-    background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    color: white; /* Cambia el texto a blanco para mejor contraste */  
+    flex-direction: column; 
+    align-items: center;    
+    justify-content: center; 
+    text-align: center;     
+    margin: 0 auto;        
+    background-image: url('.png'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    color: white; 
 }
-    
-
 
 #buscador {
-    width: 80%;             /* Ajusta el ancho del buscador */
-    max-width: 600px;       /* Limita el ancho máximo */
-    padding: 0.5rem;        /* Espaciado interno */
-    margin: 1rem 0;         /* Espaciado entre elementos */
-    border: 1px solid #ddd; /* Estilo del borde */
-    border-radius: 10px;     /* Borde redondeado */
+    width: 80%;             
+    max-width: 600px;       
+    padding: 0.5rem;        
+    margin: 1rem 0;         
+    border: 1px solid #ddd; 
+    border-radius: 10px;     
 }
   
   #organizaciones {
-    width: 100%;            /* Ajusta el ancho al 100% del contenedor */
-    max-width: 800px;       /* Limita el ancho máximo */
+    width: 100%;           
+    max-width: 800px;       
     margin-top: 1rem;
 }
 
@@ -342,3 +339,11 @@ button:hover{
     border-radius: 5px;
   }
   
+  footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f4f4f4;
+    font-size: 14px;
+    color: #555;
+    margin-top: 20px;
+}
