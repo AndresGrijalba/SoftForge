@@ -275,6 +275,7 @@ button:hover{
     padding: 20px;
     margin: 10px;
     text-align: center;
+    width: 500px;
 }
 .btn-donar {
     background-color: #004d00;
@@ -341,4 +342,11 @@ button:hover{
     border: 1px solid #ccc;
     border-radius: 5px;
   }
-  
+  #organizationCards {
+    display: grid; /* Activar diseño de rejilla */
+    grid-template-columns: repeat(2, auto); /* Dos columnas ajustadas al tamaño del contenido */
+    justify-content: center; /* Centrar las columnas horizontalmente */
+    gap: 20px; /* Espaciado entre tarjetas */
+    margin: 20px; /* Margen alrededor del contenedor */
+    padding: 10px; /* Espaciado interno */
+}
