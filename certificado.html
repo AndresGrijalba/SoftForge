@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Generar Certificado</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <title>Certificado de Donación</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -20,23 +19,30 @@
         .form-container {
             margin-bottom: 20px;
             text-align: center;
+            padding-top: 200px;
         }
         .form-group {
             margin-bottom: 10px;
         }
         .certificate {
             width: 800px;
+            height: 600px;
             border: 4px solid #0066cc;
             border-radius: 10px;
-            background: #fff;
             padding: 30px;
             text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             position: relative;
+            background-image: url('./135856351_10339629.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
         }
         .certificate h1 {
             font-size: 42px;
             color: #0066cc;
+            padding-top: 155px;
             margin-bottom: 20px;
         }
         .certificate p {
@@ -52,12 +58,35 @@
             font-size: 24px;
             color: #555;
         }
-        .icons img {
-            width: 60px;
-            margin: 0 15px;
+        #generarCertificado {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            font-size: 16px;
+            text-align: center;
         }
-        #guardarPDF {
-            margin-top: 10px;
+        #generarCertificado:hover {
+            background-color: #28a745;
+        }
+        #descargarCertificado {
+            display: none;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        #descargarCertificado:hover {
+            background-color: #28a745;
         }
     </style>
 </head>
@@ -68,12 +97,11 @@
             <input type="text" id="nombre" placeholder="Ingresa tu nombre">
         </div>
         <button id="generarCertificado">Generar Certificado</button>
-        <button id="guardarPDF" style="display: none;">Guardar como PDF</button>
+        <a id="descargarCertificado" download="Certificado_Donacion.png">Descargar Certificado</a>
     </div>
     <div id="certificadoContainer"></div>
 
     <script>
-        // Captura el evento del botón para generar el certificado
         document.getElementById('generarCertificado').addEventListener('click', () => {
             const nombre = document.getElementById('nombre').value;
 
@@ -82,58 +110,34 @@
                 return;
             }
 
-            // Obtiene la fecha actual del sistema
             const fechaActual = new Date().toLocaleDateString('es-ES', {
                 day: 'numeric',
                 month: 'long',
                 year: 'numeric'
             });
 
-            // Genera el certificado dinámicamente
-            const certificado = `
+            const certificadoHTML = `
                 <div class="certificate" id="certificado">
                     <h1>Certificado de Donación</h1>
                     <p>Se otorga el presente certificado a</p>
                     <h2>${nombre}</h2>
                     <p>Por su valiosa contribución realizada el</p>
                     <h3>${fechaActual}</h3>
-                    <div class="icons">
-                        <img src="https://via.placeholder.com/60?text=❤️" alt="Heart">
-                        <img src="https://via.placeholder.com/60?text=🤝" alt="Handshake">
-                        <img src="https://via.placeholder.com/60?text=🌍" alt="Globe">
-                    </div>
                 </div>
             `;
 
-            // Inserta el certificado en el contenedor
-            document.getElementById('certificadoContainer').innerHTML = certificado;
+            document.getElementById('certificadoContainer').innerHTML = certificadoHTML;
 
-            // Muestra el botón para guardar como PDF
-            document.getElementById('guardarPDF').style.display = 'inline-block';
-        });
+            const certificadoElement = document.getElementById('certificado');
+            html2canvas(certificadoElement).then(canvas => {
+                const certificadoImg = canvas.toDataURL("image/png");
 
-        // Función para guardar el certificado como PDF
-        document.getElementById('guardarPDF').addEventListener('click', async () => {
-            const certificado = document.getElementById('certificado');
-
-            if (!certificado) {
-                alert('Primero genera un certificado.');
-                return;
-            }
-
-            const { jsPDF } = window.jspdf;
-            const pdf = new jsPDF('p', 'mm', 'a4');
-
-            await pdf.html(certificado, {
-                callback: function (pdf) {
-                    
-                    pdf.save('Certificado_Donacion.pdf');
-                },
-                x: 10,
-                y: 10,
-                width: 190 
+                const downloadLink = document.getElementById('descargarCertificado');
+                downloadLink.href = certificadoImg;
+                downloadLink.style.display = "inline-block";
             });
         });
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
 </body>
 </html>
