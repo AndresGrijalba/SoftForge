@@ -14,39 +14,41 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+    
+    // Selección de elementos
+    const modal = document.getElementById('donarModal');
+    const openModal = document.getElementById('donarBtn');
+    const closeModal = document.getElementById('closeModal');
+    const donationForm = document.getElementById('donationForm');
 
-    const map = L.map('map').setView([20.5937, -100.3899], 5); // Coordenadas iniciales
-
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        maxZoom: 18,
-    }).addTo(map);
-
-    // Marcadores de ejemplo
-    const organizacionesData = [
-        { name: "Organización 1", coords: [19.4326, -99.1332] }, // CDMX
-        { name: "Organización 2", coords: [6.2442, -75.5812] },  // Medellín
-    ];
-
-    organizacionesData.forEach(org => {
-        L.marker(org.coords)
-            .addTo(map)
-            .bindPopup(`<b>${org.name}</b>`)
-            .openPopup();
+    // Abrir modal al hacer clic en "Donar"
+    openModal.addEventListener('click', () => {
+    modal.style.display = 'block';
     });
 
-    function initMap() {
-        const location = { lat: -34.397, lng: 150.644 }; // Coordenadas iniciales
-        const map = new google.maps.Map(document.getElementById("map"), {
-            zoom: 8,
-            center: location,
-        });
-    
-        new google.maps.Marker({
-            position: location,
-            map: map,
-        });
+    // Cerrar modal al hacer clic en "X"
+    closeModal.addEventListener('click', () => {
+    modal.style.display = 'none';
+    });
+
+    // Cerrar modal al hacer clic fuera del contenido
+    window.addEventListener('click', (event) => {
+    if (event.target === modal) {
+        modal.style.display = 'none';
     }
-    
+    });
+
+    // Manejar envío del formulario
+    donationForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+
+    const monto = document.getElementById('monto').value;
+    const medio = document.getElementById('medio').value;
+
+    alert(`Donación realizada:\nMonto: $${monto}\nMedio de Pago: ${medio}`);
+    modal.style.display = 'none';
+    });
+
 
 });
 

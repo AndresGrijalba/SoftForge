@@ -19,7 +19,7 @@ p{
 header {
     background: linear-gradient(to bottom, #4CAF50, #d2d8c7);
     color: white;
-    padding: 15px 50px;
+    padding: 10px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -48,7 +48,7 @@ nav ul li {
     border: none;
     padding: 10px 20px;
     cursor: pointer;
-    border-radius: 20px; /* Bordes redondeados */
+    border-radius: 10px; /* Bordes redondeados */
     transition: background-color 0.3s ease;
     font-size: 1rem;
     margin-left: 0px; /* Ajusta este valor para mover los botones a la derecha */
@@ -123,7 +123,7 @@ li:hover .info {
 
 .organization {
     border: 2px solid #ddd; /* Borde alrededor de cada tarjeta */
-    border-radius: 40px; /* Bordes redondeados */
+    border-radius: 15px; /* Bordes redondeados */
     padding: 1rem; /* Espaciado interno */
     background-color: #f9f9f9; /* Fondo ligero */
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
@@ -138,7 +138,6 @@ li:hover .info {
    
     margin-bottom: 1rem;  
     width: 100%; 
-    border: 1px solid #ddd; 
     border-radius: 4px;
     display: flex;
     flex-direction: column; /* Coloca los elementos en una columna */
@@ -146,7 +145,6 @@ li:hover .info {
     justify-content: center; /* Centra verticalmente */
     text-align: center;     /* Alinea texto al centro */
     margin: 0 auto;         /* Centra la sección en la página */
-    padding: 2rem;
     background-image: url('.png'); /* Ruta de la imagen */
     background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
     background-position: center; /* Centra la imagen */
@@ -162,7 +160,7 @@ li:hover .info {
     padding: 0.5rem;        /* Espaciado interno */
     margin: 1rem 0;         /* Espaciado entre elementos */
     border: 1px solid #ddd; /* Estilo del borde */
-    border-radius: 30px;     /* Borde redondeado */
+    border-radius: 10px;     /* Borde redondeado */
 }
   
   #organizaciones {
@@ -189,3 +187,92 @@ li:hover .info {
     border: 1px solid #ddd;
     border-radius: 10px;
 }
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover{
+    background-color: #1f5f2e;
+}
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+}
+.btn-donar {
+    background-color: #004d00;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn-donar:hover {
+    background-color: #003300;
+}
+  
+  /* Modal */
+  .modal {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 8px;
+    text-align: left;
+  }
+  
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .modal-header h2 {
+    margin: 0;
+  }
+  
+  .close {
+    cursor: pointer;
+    font-size: 1.5em;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input, select, button {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
